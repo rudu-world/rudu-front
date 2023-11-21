@@ -1,30 +1,49 @@
-# React + TypeScript + Vite
+# 프로젝트 개요
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+이 프로젝트는 Redux, AWS, AI, LangChain, SQL, Animation 등 지금까지 공부한 기술들을 활용하여 다이어리 & 앨범 앱을 제작하는 것을 목표로 합니다. React를 사용하여 PWA(Progressive Web App) 방식으로 구현할 예정입니다.
 
-Currently, two official plugins are available:
+## 주요 기능
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **다이어리 & 앨범**: 사용자가 일상을 기록하고 사진을 저장할 수 있는 기능을 제공합니다.
+- **인터랙티브 애니메이션**: Framer Motion을 사용하여 사용자 경험을 향상시키는 화려한 애니메이션을 구현합니다.
+- **실시간 채팅**: [Socket.io](http://Socket.io)를 활용하여 사용자 간의 실시간 채팅 기능을 제공합니다.
+- **PWA 지원**: 웹 애플리케이션을 모바일 앱처럼 사용할 수 있도록 PWA 기술을 적용합니다.
 
-## Expanding the ESLint configuration
+## 기술 스택 및 포커스
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: 웹 인터페이스 구축
+- **Framer Motion**: 동적인 UI 애니메이션 구현
+- **Redux Toolkit**: 전역 상태 관리
+- **React Query**: 서버 상태 관리 및 데이터 동기화
+- **AWS**: 인프라 및 백엔드 서비스 (EC2, RDS/Aurora, Lambda, S3, Cognito, ELB, CloudFront 등)
+- **LangChain**: AI 기반 채팅 분석 및 사용자 취향 추천
+- **SQL**: 데이터베이스 쿼리 최적화 (JOIN, 조건절 활용)
+- **JWT**: 사용자 인증 및 인가 처리
+- **Firebase**: FCM을 통한 푸시 알림 구현
+- **Socket.io**: 실시간 채팅 기능 구현
 
-- Configure the top-level `parserOptions` property like this:
+## 프론트엔드 구조
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- **랜딩 페이지**: 앱의 주요 기능과 매력을 소개하는 첫 화면
+- **로그인/회원가입**: 사용자 인증을 위한 간결하고 효율적인 인터페이스
+- **권한 요청 및 관리**: 카메라, 마이크 등 필요한 기기 권한 요청 및 관리
+- **데이터 마이그레이션**: 기존 시리즈 앱의 데이터를 새 앱으로 옮기는 작업
+- **탭 네비게이션**: 홈, 앨범, 설정 등 주요 기능에 빠르게 접근할 수 있는 탭 네비게이션 구성
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## AWS 인프라 구성
+
+- **EC2**: 서버 호스팅 및 Docker 컨테이너 관리
+- **RDS/Aurora**: 데이터베이스 서비스 관리
+- **Elastic Load Balancing (ELB)**: 트래픽 분산 및 관리
+- **Lambda**: 서버리스 백엔드 로직 실행
+- **S3**: 정적 자산 저장 및 제공
+- **Cognito**: 사용자 인증 및 인가 관리
+- **CloudFront**: CDN을 통한 컨텐츠 배포 최적화
+- **SNS/SQS**: 메시징 및 알림 서비스
+- **CloudWatch & IAM**: 애플리케이션 모니터링 및 접근 관리
+
+## 개발 및 배포 프로세스
+
+- **개발 환경**: 로컬 개발 환경은 Docker를 통해 표준화합니다.
+- **버전 관리**: Git을 사용하여 소스 코드의 버전을 관리합니다.
+- **CI/CD 파이프라인**: GitHub Actions를 사용하여 코드 변경 사항을 자동으로 배포합니다.
