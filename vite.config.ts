@@ -4,6 +4,10 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    // 도커 컨테이너에서 작동하는 서버를 외부에서 접근할 수 있게 설정
+    host: "0.0.0.0",
+  },
   plugins: [
     react(),
     VitePWA({
