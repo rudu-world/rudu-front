@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  app:
+    container_name: react-dev
+    build:
+      # Dockerfile.dev의 경로
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      # 현재 로컬 머신의 루트를 컨테이너의 /app 디렉토리에 마운트 (로컬의 파일들이 컨테이너의 app 경로로 들어감)
+      - .:/app
+      # 로컬 머신의 node_modules 가 컨테이너로 들어가는 것 방지
+      - /app/node_modules
+    ports:
+      - "3000:5173"
+    environment:
+      - NODE_ENV=development
+      # 이게 있어야 HMR이 작동함
+      - CHOKIDAR_USEPOLLING=true
