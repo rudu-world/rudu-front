@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -154,4 +155,37 @@ export default defineConfig({
       },
     }),
   ],
+  resolve: {
+    alias: [
+      { find: "@", replacement: resolve(__dirname, "src") },
+      {
+        find: "@assets",
+        replacement: resolve(__dirname, "src/assets"),
+      },
+      {
+        find: "@hooks",
+        replacement: resolve(__dirname, "src/hooks"),
+      },
+      {
+        find: "@pages",
+        replacement: resolve(__dirname, "src/pages"),
+      },
+      {
+        find: "@store",
+        replacement: resolve(__dirname, "src/store"),
+      },
+      {
+        find: "@styles",
+        replacement: resolve(__dirname, "src/styles"),
+      },
+      {
+        find: "@types",
+        replacement: resolve(__dirname, "src/types"),
+      },
+      {
+        find: "@utils",
+        replacement: resolve(__dirname, "src/utils"),
+      },
+    ],
+  },
 });
