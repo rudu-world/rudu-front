@@ -1355,17 +1355,17 @@
   dependencies:
     "@typescript-eslint/utils" "^5.54.0"
 
-"@tanstack/query-core@5.8.3":
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.8.3.tgz#7c6d62721518223e8b27f1a0b5e9bd4e3bb7ecd8"
-  integrity sha512-SWFMFtcHfttLYif6pevnnMYnBvxKf3C+MHMH7bevyYfpXpTMsLB9O6nNGBdWSoPwnZRXFNyNeVZOw25Wmdasow==
+"@tanstack/query-core@5.8.7":
+  version "5.8.7"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.8.7.tgz#460137555565d478930690f2c992f414da3bec7b"
+  integrity sha512-58xOSkxxZK4SGQ/uzX8MDZHLGZCkxlgkPxnfhxUOL2uchnNHyay2UVcR3mQNMgaMwH1e2l+0n+zfS7+UJ/MAJw==
 
-"@tanstack/react-query@^5.8.4":
-  version "5.8.4"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.8.4.tgz#7d5ef4dc4e2985fdc607d0f30ff79a8453abe652"
-  integrity sha512-CD+AkXzg8J72JrE6ocmuBEJfGzEzu/bzkD6sFXFDDB5yji9N20JofXZlN6n0+CaPJuIi+e4YLCbGsyPFKkfNQA==
+"@tanstack/react-query@^5.8.9":
+  version "5.8.9"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.8.9.tgz#6d9e0f37d9086ffb16ee4338de7ab98101251be6"
+  integrity sha512-AmrvpXv7Vo9HlvIFd1ChyphUUskVAq60bpQFPxZmephHf2H2LZHqPIiLl8IEij0dvORpqp6BoUH8IS/HSWkn0w==
   dependencies:
-    "@tanstack/query-core" "5.8.3"
+    "@tanstack/query-core" "5.8.7"
 
 "@types/babel__core@^7.20.4":
   version "7.20.5"
@@ -1410,7 +1410,7 @@
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.11.tgz#56588b17ae8f50c53983a524fc3cc47437969d64"
   integrity sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==
 
-"@types/hoist-non-react-statics@^3.3.1":
+"@types/hoist-non-react-statics@*", "@types/hoist-non-react-statics@^3.3.1":
   version "3.3.5"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.5.tgz#dab7867ef789d87e2b4b0003c9d65c49cc44a494"
   integrity sha512-SbcrWzkKBw2cdwRTwQAswfpB9g9LJWfjtUeW/jvNwbhC8cpmmNYVePa+ncbUe0rGTQ7G3Ff6mYUN2VMfLVr+Sg==
@@ -1491,6 +1491,15 @@
   version "7.5.6"
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.5.6.tgz#c65b2bfce1bec346582c07724e3f8c1017a20339"
   integrity sha512-dn1l8LaMea/IjDoHNd9J52uBbInB796CDffS6VdIxvqYCPSG0V0DzHp76GpaWnlhg88uYyPbXCDIowa86ybd5A==
+
+"@types/styled-components@^5.1.32":
+  version "5.1.32"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.32.tgz#58718971519c4562229ba85face98e8530d21bfd"
+  integrity sha512-DqVpl8R0vbhVSop4120UHtGrFmHuPeoDwF4hDT0kPJTY8ty0SI38RV3VhCMsWigMUXG+kCXu7vMRqMFNy6eQgA==
+  dependencies:
+    "@types/hoist-non-react-statics" "*"
+    "@types/react" "*"
+    csstype "^3.0.2"
 
 "@types/stylis@^4.0.2":
   version "4.2.4"
@@ -3575,6 +3584,11 @@ styled-components@^6.1.1:
     shallowequal "^1.1.0"
     stylis "^4.3.0"
     tslib "^2.5.0"
+
+styled-reset@^4.5.1:
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/styled-reset/-/styled-reset-4.5.1.tgz#631aee45dcef871cab8b25da29271eafc494f694"
+  integrity sha512-6EvFWZRwaFRFxiPYMwmnzOe33rDkw5r9jIU0eEi49bkt6VSrvjeMp2ZOw/YFbw5SVs81llIY+5fzHtR2/VBZfQ==
 
 stylis@^4.3.0:
   version "4.3.0"
