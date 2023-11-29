@@ -4,9 +4,11 @@ WORKDIR /app
 
 COPY package*.json ./
 
+RUN yarn
+
 COPY . .
 
-RUN yarn
+ENV CHOKIDAR_USEPOLLING=true
 
 EXPOSE 5173
 
